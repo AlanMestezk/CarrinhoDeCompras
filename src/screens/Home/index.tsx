@@ -1,6 +1,8 @@
-import { View, Text, SafeAreaViewBase, FlatList, TouchableOpacity } from "react-native"
+import { View, Text, FlatList, TouchableOpacity } from "react-native"
 import { HomeStyles } from "./styles/HomeStyles.module"
 import { useState } from "react"
+import { Ionicons } from '@expo/vector-icons';
+
 
 export const Home = ()=>{
 
@@ -60,7 +62,25 @@ export const Home = ()=>{
     return(
         <View style={HomeStyles.container}>
 
-            <Text>Home Page</Text>
+            <View style={HomeStyles.cartContent}>
+
+                <Text style={HomeStyles.title}>Lista de produtos</Text>
+
+                <TouchableOpacity style={HomeStyles.cartButton}>
+
+                    <View style={HomeStyles.dot}>
+
+                        <Text style={HomeStyles.dotText}>3</Text>
+
+                    </View>
+                
+                    <Ionicons name="cart-outline" size={40} color="black" />
+
+                </TouchableOpacity>
+
+            </View>
+
+            
 
         </View>
     )
